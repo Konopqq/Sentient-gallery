@@ -61,46 +61,93 @@ body {
   color: var(--text-color);
 }
 
+/* === Мозаичная сетка (Pinterest-стиль) === */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 10px;
+  column-count: 4;
+  column-gap: 18px;
   padding: 20px;
 }
 
+@media (max-width: 1200px) {
+  .gallery {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 800px) {
+  .gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery {
+    column-count: 1;
+  }
+}
+
+/* Карточка */
 .card {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 18px;
+  break-inside: avoid;
   position: relative;
-  overflow: hidden;
   border-radius: 16px;
   background: var(--card-bg);
-  display: flex;
-  flex-direction: column;
+  overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
+  padding: 8px; /* внутренний отступ */
+  box-sizing: border-box;
 }
 
 .card:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
 }
 
+/* Название */
 .card-title {
-  padding: 8px;
+  padding: 4px;
   font-weight: bold;
+  font-size: 14px;
   text-align: center;
 }
 
+/* Фото */
 .card img {
   width: 100%;
+  height: auto;
   display: block;
+  border-radius: 10px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  background: rgba(0,0,0,0.05);
 }
 
+/* Подгоняем размеры */
+.card img {
+  max-height: 280px; /* стало чуть больше, чем раньше */
+}
+
+.card.horizontal img {
+  max-height: 240px;
+}
+
+.card.vertical img {
+  max-height: 320px;
+}
+
+/* Автор */
 .card-author {
-  padding: 5px 8px;
+  padding: 6px 8px;
   font-size: 12px;
   text-align: center;
-  background-color: rgba(255,255,255,0.6);
+  background-color: rgba(255,255,255,0.5);
   color: #333;
+  border-radius: 8px;
+  margin-top: 6px;
 }
 
 body:not(.light-theme) .card-author {
@@ -108,6 +155,7 @@ body:not(.light-theme) .card-author {
   color: #fff;
 }
 
+/* Кнопка скачивания */
 .buttons {
   position: absolute;
   top: 10px;
@@ -121,13 +169,37 @@ body:not(.light-theme) .card-author {
 }
 
 .download-btn {
-  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--text-color);
   background: var(--button-bg);
-  padding: 5px 10px;
-  border-radius: 8px;
+  padding: 8px;
+  border-radius: 50%;
+  text-decoration: none;
+  width: 34px;
+  height: 34px;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
 }
 
+.download-btn svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s, stroke 0.2s;
+}
+
+.download-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+  background: linear-gradient(135deg, #8c9eff, #82f7ff);
+}
+
+.download-btn:hover svg {
+  stroke: #fff;
+  transform: scale(1.1);
+}
+
+/* Модал */
 .modal {
   display: none;
   position: fixed;
@@ -159,6 +231,7 @@ body:not(.light-theme) .card-author {
   cursor: pointer;
 }
 
+/* Footer */
 .footer {
   text-align: center;
   padding: 15px;
@@ -168,6 +241,7 @@ body:not(.light-theme) .card-author {
   font-size: 14px;
 }
 
+/* Checkbox filter */
 .checkbox-container {
   position: relative;
   display: inline-flex;
@@ -183,8 +257,8 @@ body:not(.light-theme) .card-author {
 }
 
 .checkmark {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   border-radius: 6px;
   background-color: rgba(0,0,0,0.1);
   margin-right: 6px;
@@ -208,38 +282,8 @@ body:not(.light-theme) .checkmark {
 }
 
 .label-text {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
   color: var(--text-color);
   letter-spacing: 1px;
-}
-.download-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-color);
-  background: var(--button-bg);
-  padding: 10px;
-  border-radius: 50%;
-  text-decoration: none;
-  width: 40px;
-  height: 40px;
-  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
-}
-
-.download-btn svg {
-  width: 20px;
-  height: 20px;
-  transition: transform 0.2s, stroke 0.2s;
-}
-
-.download-btn:hover {
-  transform: scale(1.2);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
-  background: linear-gradient(135deg, #8c9eff, #82f7ff);
-}
-
-.download-btn:hover svg {
-  stroke: #fff; /* при наведении стрелка становится белой на градиенте */
-  transform: scale(1.1);
 }

@@ -1,4 +1,4 @@
-// script.js — надійний варіант, чекає DOMContentLoaded, створює чекбокс при відсутності та валідує елементи
+// script.js — надежный вариант: ждет DOMContentLoaded, создает чекбокс при отсутствии и валидирует элементы
 document.addEventListener('DOMContentLoaded', () => {
   let allPhotos = [];
 
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalImg = document.getElementById('modalImg');
   const closeModalBtn = document.getElementById('closeModal');
 
-  // Якщо чекбокс FON відсутній — створимо його динамічно (щоб не падало)
+  // Если чекбокс FON отсутствует — создаем его динамически
   let fonFilter = document.getElementById('fonFilter');
   if (!fonFilter) {
     const filterGroup = document.createElement('div');
@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <span class="label-text">FON</span>
       </label>
     `;
-    // вставляємо поруч з полем фільтра, або в хедер якщо поля немає
     if (filterInput && filterInput.parentNode) {
       filterInput.parentNode.insertBefore(filterGroup, filterInput.nextSibling);
     } else {
@@ -37,8 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const res = await fetch('./data/photos.json');
       if (!res.ok) throw new Error('Ошибка загрузки JSON: ' + res.status);
       allPhotos = await res.json();
-      // нормалізуємо поле hasBackground: якщо його немає — вважаємо true (щоб не ховати нечекнуті)
-      allPhotos = allPhotos.map(p => ({ ...p, hasBackground: p.hasBackground !== undefined ? !!p.hasBackground : true }));
+      // нормализуем поле hasBackground
+      allPhotos = allPhotos.map(p => ({
+        ...p,
+        hasBackground: p.hasBackground !== undefined ? !!p.hasBackground : true
+      }));
       renderGallery(allPhotos);
     } catch (err) {
       console.error(err);
@@ -46,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Відрисовка галереї
+  // Отрисовка галереи
   function renderGallery(photos) {
     if (!gallery) return;
     gallery.innerHTML = '';
@@ -64,6 +66,16 @@ document.addEventListener('DOMContentLoaded', () => {
       img.alt = photo.title || '';
       img.addEventListener('click', () => openModal(photo.file));
 
+      // определяем ориентацию фото
+      img.addEventListener('load', () => {
+        const aspectRatio = img.naturalWidth / img.naturalHeight;
+        if (aspectRatio > 1.3) {
+          card.classList.add('horizontal');
+        } else {
+          card.classList.add('vertical');
+        }
+      });
+
       const author = document.createElement('div');
       author.className = 'card-author';
       author.textContent = `By ${photo.author || 'Unknown'}`;
@@ -74,14 +86,14 @@ document.addEventListener('DOMContentLoaded', () => {
       download.className = 'download-btn';
       download.href = photo.file;
       download.setAttribute('download', '');
-download.innerHTML = `
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-    <line x1="12" y1="5" x2="12" y2="17"></line>
-    <polyline points="5 12 12 19 19 12"></polyline>
-  </svg>
-`;
-
-
+      download.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="17"></line>
+          <polyline points="5 12 12 19 19 12"></polyline>
+        </svg>
+      `;
       buttons.appendChild(download);
 
       card.appendChild(title);
@@ -99,7 +111,7 @@ download.innerHTML = `
     modal.style.display = 'block';
     modalImg.src = imgSrc;
   }
-  window.openModal = openModal; // на випадок, якщо хтось викличе global
+  window.openModal = openModal;
 
   if (closeModalBtn) {
     closeModalBtn.addEventListener('click', () => {
@@ -114,14 +126,16 @@ download.innerHTML = `
     if (e.key === 'Escape' && modal) modal.style.display = 'none';
   });
 
-  // Фільтрація
+  // Фильтрация (ищет по названию и автору)
   function applyFilters() {
-    const query = filterInput ? filterInput.value.toLowerCase() : '';
+    const query = filterInput ? filterInput.value.toLowerCase().trim() : '';
     const showWithFon = fonFilter ? fonFilter.checked : false;
 
-    let filtered = allPhotos.filter(photo =>
-      String(photo.title || '').toLowerCase().includes(query)
-    );
+    let filtered = allPhotos.filter(photo => {
+      const title = String(photo.title || '').toLowerCase();
+      const author = String(photo.author || '').toLowerCase();
+      return title.includes(query) || author.includes(query);
+    });
 
     if (showWithFon) {
       filtered = filtered.filter(photo => photo.hasBackground === true);
@@ -133,13 +147,13 @@ download.innerHTML = `
   if (filterInput) filterInput.addEventListener('input', applyFilters);
   if (fonFilter) fonFilter.addEventListener('change', applyFilters);
 
-  // Тема
+  // Переключение темы
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
       document.body.classList.toggle('light-theme');
     });
   }
 
-  // Ініціалізація
+  // Инициализация
   loadPhotos();
 });

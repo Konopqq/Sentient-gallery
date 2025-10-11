@@ -1,13 +1,223 @@
 [
   {
     "title": "Dobby Heart 1",
-    "file": "photos/DobbyHeart1.png",
+    "file": "photos/Dobby/DobbyHeart1.png",
     "author": "@Catchqgg",
     "hasBackground": false
   },
   {
     "title": "Dobby Heart 2",
-    "file": "photos/DobbyHeart2.png",
+    "file": "photos/Dobby/DobbyHeart2.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+    {
+    "title": "Dobby Cute 1",
+    "file": "photos/Dobby/DobbyCute.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+      {
+    "title": "I love Sentient",
+    "file": "photos/IloveSentient.png",
+    "author": "@Catchqgg",
+    "hasBackground": true
+  },
+      {
+    "title": "Dobby Billions 1",
+    "file": "photos/Dobby/DobbyBillions1.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "Icon-Black-L",
+    "file": "photos/Logo/Sentient-Icon-Black-L.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "Icon-Black-M",
+    "file": "photos/Logo/Sentient-Icon-Black-M.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "Icon-Black",
+    "file": "photos/Logo/Sentient-Icon-Black.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "Icon-BlushForce-L",
+    "file": "photos/Logo/SENTIENT-Icon-BlushForce-L.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "Icon-BlushForce-M",
+    "file": "photos/Logo/SENTIENT-Icon-BlushForce-M.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "Icon-BlushForce",
+    "file": "photos/Logo/SENTIENT-Icon-BlushForce.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "Icon-White-L",
+    "file": "photos/Logo/Sentient-Icon-White-L.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "Icon-White-M",
+    "file": "photos/Logo/Sentient-Icon-White-M.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "Icon-White",
+    "file": "photos/Logo/Sentient-Icon-White.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "Icon-White",
+    "file": "photos/Logo/Sentient-Icon-White.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "WordMark-Black-L",
+    "file": "photos/WordMark/SENTIENT-Black-L.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "WordMark-Black-M",
+    "file": "photos/WordMark/SENTIENT-Black-M.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "WordMark-Black-S",
+    "file": "photos/WordMark/SENTIENT-Black-S.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "WordMark-BlushForce-L",
+    "file": "photos/WordMark/SENTIENT-Logo-BlushForce-L.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "WordMark-BlushForce-M",
+    "file": "photos/WordMark/SENTIENT-Logo-BlushForce-M.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "WordMark-BlushForce",
+    "file": "photos/WordMark/SENTIENT-Logo-BlushForce.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "WordMark-White-L",
+    "file": "photos/WordMark/SENTIENT-White-L.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "WordMark-White-M",
+    "file": "photos/WordMark/SENTIENT-White-M.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "WordMark-White-S",
+    "file": "photos/WordMark/SENTIENT-White-S.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "WordMark+Icon-Black-L",
+    "file": "photos/WordMark+Icon/SENTIENT-Icon-Black-L.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "WordMark+Icon-Black-M",
+    "file": "photos/WordMark+Icon/SENTIENT-Icon-Black-M.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "WordMark+Icon-Black-S",
+    "file": "photos/WordMark+Icon/SENTIENT-Icon-Black-S.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "WordMark+Icon-BlushForce-L",
+    "file": "photos/WordMark+Icon/SENTIENT-Icon-BlushForce-L.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "WordMark+Icon-BlushForce-M",
+    "file": "photos/WordMark+Icon/SENTIENT-Icon-BlushForce-M.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "WordMark+Icon-BlushForce",
+    "file": "photos/WordMark+Icon/SENTIENT-Icon-BlushForce.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "WordMark+Icon-White-L.png",
+    "file": "photos/WordMark+Icon/SENTIENT-Icon-White-L.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "WordMark+Icon-White-M.png",
+    "file": "photos/WordMark+Icon/SENTIENT-Icon-White-M.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "WordMark+Icon-White-S.png",
+    "file": "photos/WordMark+Icon/SENTIENT-Icon-White-S.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "Dobby Billions 2",
+    "file": "photos/Dobby/DobbyBillions2.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "Dobby Icon Black",
+    "file": "photos/Dobby/DobbyIconBlack.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "DobbyJump Icon Black",
+    "file": "photos/Dobby/DobbyJumpIconBlack.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+  },
+        {
+    "title": "Dobby Embarrassed Icon Black",
+    "file": "photos/Dobby/DobbyEmbarrassedIconBlack.png",
     "author": "@Catchqgg",
     "hasBackground": false
   }
