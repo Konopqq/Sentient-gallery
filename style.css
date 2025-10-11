@@ -213,3 +213,33 @@ body:not(.light-theme) .checkmark {
   color: var(--text-color);
   letter-spacing: 1px;
 }
+.download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  background: var(--button-bg);
+  padding: 10px;
+  border-radius: 50%;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.download-btn svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s, stroke 0.2s;
+}
+
+.download-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+  background: linear-gradient(135deg, #8c9eff, #82f7ff);
+}
+
+.download-btn:hover svg {
+  stroke: #fff; /* при наведении стрелка становится белой на градиенте */
+  transform: scale(1.1);
+}
