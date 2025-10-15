@@ -1,4 +1,4 @@
-// script.js — надежный вариант: ждет DOMContentLoaded, создает чекбокс при отсутствии и валидирует элементы
+// script.js — расширенный: поддержка фото и видео
 document.addEventListener('DOMContentLoaded', () => {
   let allPhotos = [];
 
@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterInput = document.getElementById('filterInput');
   const themeToggle = document.getElementById('themeToggle');
   const modal = document.getElementById('modal');
-  const modalImg = document.getElementById('modalImg');
   const closeModalBtn = document.getElementById('closeModal');
 
   // Если чекбокс FON отсутствует — создаем его динамически
@@ -30,17 +29,19 @@ document.addEventListener('DOMContentLoaded', () => {
     fonFilter = document.getElementById('fonFilter');
   }
 
-  // Загрузка фото
+  // Загрузка фото и видео
   async function loadPhotos() {
     try {
       const res = await fetch('./data/photos.json');
       if (!res.ok) throw new Error('Ошибка загрузки JSON: ' + res.status);
       allPhotos = await res.json();
+
       // нормализуем поле hasBackground
       allPhotos = allPhotos.map(p => ({
         ...p,
         hasBackground: p.hasBackground !== undefined ? !!p.hasBackground : true
       }));
+
       renderGallery(allPhotos);
     } catch (err) {
       console.error(err);
@@ -48,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Отрисовка галереи
+  // --- Отрисовка галереи (поддерживает фото и видео) ---
   function renderGallery(photos) {
     if (!gallery) return;
     gallery.innerHTML = '';
@@ -61,20 +62,34 @@ document.addEventListener('DOMContentLoaded', () => {
       title.className = 'card-title';
       title.textContent = photo.title || 'Untitled';
 
-      const img = document.createElement('img');
-      img.src = photo.file;
-      img.alt = photo.title || '';
-      img.addEventListener('click', () => openModal(photo.file));
+      const ext = photo.file.split('.').pop().toLowerCase();
+      let mediaElement;
 
-      // определяем ориентацию фото
-      img.addEventListener('load', () => {
-        const aspectRatio = img.naturalWidth / img.naturalHeight;
-        if (aspectRatio > 1.3) {
-          card.classList.add('horizontal');
-        } else {
-          card.classList.add('vertical');
-        }
-      });
+      if (['mp4', 'webm', 'ogg'].includes(ext)) {
+        // 🎥 Видео
+        mediaElement = document.createElement('video');
+        mediaElement.src = photo.file;
+        mediaElement.controls = true;
+        mediaElement.preload = 'metadata';
+        mediaElement.className = 'video-thumb';
+        mediaElement.addEventListener('click', () => openModal(photo.file, 'video'));
+      } else {
+        // 🖼 Фото
+        mediaElement = document.createElement('img');
+        mediaElement.src = photo.file;
+        mediaElement.alt = photo.title || '';
+        mediaElement.addEventListener('click', () => openModal(photo.file, 'image'));
+
+        // определяем ориентацию фото
+        mediaElement.addEventListener('load', () => {
+          const aspectRatio = mediaElement.naturalWidth / mediaElement.naturalHeight;
+          if (aspectRatio > 1.3) {
+            card.classList.add('horizontal');
+          } else {
+            card.classList.add('vertical');
+          }
+        });
+      }
 
       const author = document.createElement('div');
       author.className = 'card-author';
@@ -97,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       buttons.appendChild(download);
 
       card.appendChild(title);
-      card.appendChild(img);
+      card.appendChild(mediaElement);
       card.appendChild(author);
       card.appendChild(buttons);
 
@@ -105,20 +120,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Модал
-  function openModal(imgSrc) {
-    if (!modal || !modalImg) return;
+  // --- Модальное окно для фото и видео ---
+  function openModal(file, type = 'image') {
+    if (!modal) return;
     modal.style.display = 'block';
-    modalImg.src = imgSrc;
+    modal.innerHTML = '<span id="closeModal" class="close">&times;</span>';
+
+    if (type === 'video') {
+      const vid = document.createElement('video');
+      vid.src = file;
+      vid.controls = true;
+      vid.autoplay = true;
+      vid.className = 'modal-content';
+      modal.appendChild(vid);
+    } else {
+      const img = document.createElement('img');
+      img.src = file;
+      img.className = 'modal-content';
+      modal.appendChild(img);
+    }
+
+    const closeBtn = modal.querySelector('#closeModal');
+    closeBtn.addEventListener('click', () => (modal.style.display = 'none'));
   }
   window.openModal = openModal;
 
-  if (closeModalBtn) {
-    closeModalBtn.addEventListener('click', () => {
-      if (modal) modal.style.display = 'none';
-    });
-  }
-
+  // --- Закрытие модалки по клику и Escape ---
   window.addEventListener('click', (e) => {
     if (e.target === modal && modal) modal.style.display = 'none';
   });
@@ -126,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape' && modal) modal.style.display = 'none';
   });
 
-  // Фильтрация (ищет по названию и автору)
+  // --- Фильтрация (по названию и автору, плюс FON) ---
   function applyFilters() {
     const query = filterInput ? filterInput.value.toLowerCase().trim() : '';
     const showWithFon = fonFilter ? fonFilter.checked : false;
@@ -147,13 +174,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (filterInput) filterInput.addEventListener('input', applyFilters);
   if (fonFilter) fonFilter.addEventListener('change', applyFilters);
 
-  // Переключение темы
+  // --- Переключение темы ---
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
       document.body.classList.toggle('light-theme');
     });
   }
 
-  // Инициализация
+  // --- Инициализация ---
   loadPhotos();
 });

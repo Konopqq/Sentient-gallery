@@ -138,7 +138,61 @@
     "file": "photos/Dobby/DobbySad.png",
     "author": "@Catchqgg",
     "hasBackground": false
-  }
-
+    },
+        {
+    "title": "Dobby Chef",
+    "file": "photos/Dobby/DobbyСhef.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Boss",
+    "file": "photos/Dobby/DobbyBoss.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Kaito",
+    "file": "photos/Dobby/DobbyKaito.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Dislike",
+    "file": "photos/Dobby/DobbyDislike.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Romantic",
+    "file": "photos/Dobby/DobbyRomantic.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Jump Icon Black 2.png",
+    "file": "photos/Dobby/DobbyJumpBlack2.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Kaito 2.png",
+    "file": "photos/Dobby/DobbyKaito2.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby in Paris video",
+    "file": "photos/video/DobbyinParis.mp4",
+    "author": "@Axer003",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby in USA video",
+    "file": "photos/video/DobbyinUSA.mp4",
+    "author": "@Axer003",
+    "hasBackground": false
+    }
+    
 ]
 
