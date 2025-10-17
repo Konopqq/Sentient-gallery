@@ -61,7 +61,7 @@ body {
   color: var(--text-color);
 }
 
-/* === Мозаичная сетка (Pinterest-стиль) === */
+
 .gallery {
   column-count: 4;
   column-gap: 18px;
@@ -86,7 +86,7 @@ body {
   }
 }
 
-/* Карточка */
+
 .card {
   display: inline-block;
   width: 100%;
@@ -98,7 +98,7 @@ body {
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
-  padding: 8px; /* внутренний отступ */
+  padding: 8px; 
   box-sizing: border-box;
 }
 
@@ -107,7 +107,7 @@ body {
   box-shadow: 0 6px 15px rgba(0,0,0,0.4);
 }
 
-/* Название */
+
 .card-title {
   padding: 4px;
   font-weight: bold;
@@ -115,7 +115,7 @@ body {
   text-align: center;
 }
 
-/* Фото */
+
 .card img {
   width: 100%;
   height: auto;
@@ -126,9 +126,9 @@ body {
   background: rgba(0,0,0,0.05);
 }
 
-/* Подгоняем размеры */
+
 .card img {
-  max-height: 280px; /* стало чуть больше, чем раньше */
+  max-height: 280px; 
 }
 
 .card.horizontal img {
@@ -139,7 +139,7 @@ body {
   max-height: 320px;
 }
 
-/* Автор */
+
 .card-author {
   padding: 6px 8px;
   font-size: 12px;
@@ -155,7 +155,7 @@ body:not(.light-theme) .card-author {
   color: #fff;
 }
 
-/* Кнопка скачивания */
+
 .buttons {
   position: absolute;
   top: 10px;
@@ -199,7 +199,7 @@ body:not(.light-theme) .card-author {
   transform: scale(1.1);
 }
 
-/* Модал */
+
 .modal {
   display: none;
   position: fixed;
@@ -231,7 +231,7 @@ body:not(.light-theme) .card-author {
   cursor: pointer;
 }
 
-/* Footer */
+
 .footer {
   text-align: center;
   padding: 15px;
@@ -241,7 +241,7 @@ body:not(.light-theme) .card-author {
   font-size: 14px;
 }
 
-/* Checkbox filter */
+
 .checkbox-container {
   position: relative;
   display: inline-flex;
@@ -287,7 +287,7 @@ body:not(.light-theme) .checkmark {
   color: var(--text-color);
   letter-spacing: 1px;
 }
-/* Миниатюры видео в галерее */
+
 .video-thumb {
   width: 100%;
   max-height: 180px;

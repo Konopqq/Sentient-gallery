@@ -1,4 +1,4 @@
-// script.js — расширенный: поддержка фото и видео
+
 document.addEventListener('DOMContentLoaded', () => {
   let allPhotos = [];
 
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('modal');
   const closeModalBtn = document.getElementById('closeModal');
 
-  // Если чекбокс FON отсутствует — создаем его динамически
+  
   let fonFilter = document.getElementById('fonFilter');
   if (!fonFilter) {
     const filterGroup = document.createElement('div');
@@ -29,14 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
     fonFilter = document.getElementById('fonFilter');
   }
 
-  // Загрузка фото и видео
+  
   async function loadPhotos() {
     try {
       const res = await fetch('./data/photos.json');
       if (!res.ok) throw new Error('Ошибка загрузки JSON: ' + res.status);
       allPhotos = await res.json();
 
-      // нормализуем поле hasBackground
+      
       allPhotos = allPhotos.map(p => ({
         ...p,
         hasBackground: p.hasBackground !== undefined ? !!p.hasBackground : true
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // --- Отрисовка галереи (поддерживает фото и видео) ---
+  
   function renderGallery(photos) {
     if (!gallery) return;
     gallery.innerHTML = '';
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let mediaElement;
 
       if (['mp4', 'webm', 'ogg'].includes(ext)) {
-        // 🎥 Видео
+        
         mediaElement = document.createElement('video');
         mediaElement.src = photo.file;
         mediaElement.controls = true;
@@ -74,13 +74,13 @@ document.addEventListener('DOMContentLoaded', () => {
         mediaElement.className = 'video-thumb';
         mediaElement.addEventListener('click', () => openModal(photo.file, 'video'));
       } else {
-        // 🖼 Фото
+        
         mediaElement = document.createElement('img');
         mediaElement.src = photo.file;
         mediaElement.alt = photo.title || '';
         mediaElement.addEventListener('click', () => openModal(photo.file, 'image'));
 
-        // определяем ориентацию фото
+        
         mediaElement.addEventListener('load', () => {
           const aspectRatio = mediaElement.naturalWidth / mediaElement.naturalHeight;
           if (aspectRatio > 1.3) {
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Модальное окно для фото и видео ---
+
   function openModal(file, type = 'image') {
     if (!modal) return;
     modal.style.display = 'block';
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.openModal = openModal;
 
-  // --- Закрытие модалки по клику и Escape ---
+
   window.addEventListener('click', (e) => {
     if (e.target === modal && modal) modal.style.display = 'none';
   });
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape' && modal) modal.style.display = 'none';
   });
 
-  // --- Фильтрация (по названию и автору, плюс FON) ---
+
   function applyFilters() {
     const query = filterInput ? filterInput.value.toLowerCase().trim() : '';
     const showWithFon = fonFilter ? fonFilter.checked : false;
@@ -174,13 +174,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (filterInput) filterInput.addEventListener('input', applyFilters);
   if (fonFilter) fonFilter.addEventListener('change', applyFilters);
 
-  // --- Переключение темы ---
+
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
       document.body.classList.toggle('light-theme');
     });
   }
 
-  // --- Инициализация ---
+
   loadPhotos();
 });

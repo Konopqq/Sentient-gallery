@@ -192,7 +192,26 @@
     "file": "photos/video/DobbyinUSA.mp4",
     "author": "@Axer003",
     "hasBackground": false
+    },
+        {
+    "title": "Dobby Artist",
+    "file": "photos/Dobby/DobbyArtist.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Artist",
+    "file": "photos/Dobby/DobbyOML.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby With Bear",
+    "file": "photos/Dobby/DobbyWithBear.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
     }
+    
     
 ]
 
