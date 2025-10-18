@@ -210,8 +210,30 @@
     "file": "photos/Dobby/DobbyWithBear.png",
     "author": "@Catchqgg",
     "hasBackground": false
+    },
+        {
+    "title": "Dobby Gladiator",
+    "file": "photos/Dobby/DobbyGladiator.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Football",
+    "file": "photos/Dobby/DobbyFootball.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby With Horse",
+    "file": "photos/Dobby/DobbyWithHorse.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Hero",
+    "file": "photos/Dobby/DobbyHero.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
     }
     
-    
 ]
-
