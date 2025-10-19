@@ -185,13 +185,13 @@
     "title": "Dobby in Paris video",
     "file": "photos/video/DobbyinParis.mp4",
     "author": "@Axer003",
-    "hasBackground": false
+    "hasBackground": true
     },
         {
     "title": "Dobby in USA video",
     "file": "photos/video/DobbyinUSA.mp4",
     "author": "@Axer003",
-    "hasBackground": false
+    "hasBackground": true
     },
         {
     "title": "Dobby Artist",
@@ -234,6 +234,47 @@
     "file": "photos/Dobby/DobbyHero.png",
     "author": "@Catchqgg",
     "hasBackground": false
+    },
+        {
+    "title": "Dobby Batman",
+    "file": "photos/Dobby/DobbyBatman.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Mario",
+    "file": "photos/Dobby/DobbyMario.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Mechanic",
+    "file": "photos/Dobby/DobbyMechanic.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Winner",
+    "file": "photos/Dobby/DobbyWinner.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "FON 1",
+    "file": "photos/FON/FON_1.png",
+    "author": "@Catchqgg",
+    "hasBackground": true
+    },
+        {
+    "title": "FON 3",
+    "file": "photos/FON/FON_3.png",
+    "author": "@Catchqgg",
+    "hasBackground": true
+    },
+        {
+    "title": "FON 4",
+    "file": "photos/FON/FON_4.png",
+    "author": "@Catchqgg",
+    "hasBackground": true
     }
-    
 ]
