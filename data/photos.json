@@ -480,6 +480,30 @@
     "file": "photos/Dobby/DobbyPumpkin3.png",
     "author": "@Catchqgg",
     "hasBackground": false
+    },
+        {
+    "title": "Dobby Pumpkin Love",
+    "file": "photos/Dobby/DobbyLove.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Camera",
+    "file": "photos/Dobby/DobbyCamera.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Camera 2",
+    "file": "photos/Dobby/DobbyCamera2.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Teacher",
+    "file": "photos/Dobby/DobbyTeacher.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
     }
 ]
 
