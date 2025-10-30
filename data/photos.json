@@ -504,6 +504,36 @@
     "file": "photos/Dobby/DobbyTeacher.png",
     "author": "@Catchqgg",
     "hasBackground": false
+    },
+        {
+    "title": "Dobby King",
+    "file": "photos/Dobby/DobbyKing.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Princess",
+    "file": "photos/Dobby/DobbyPrincess.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Queen",
+    "file": "photos/Dobby/DobbyQueen.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Look",
+    "file": "photos/Dobby/DobbyLook.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Interesting",
+    "file": "photos/Dobby/DobbyInteresting.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
     }
 ]
 
