@@ -600,6 +600,24 @@
     "file": "photos/Dobby/DobbyStrong.png",
     "author": "@Catchqgg",
     "hasBackground": false
+    },
+        {
+    "title": "Dobby Back",
+    "file": "photos/Dobby/DobbyBack.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Heisenberg",
+    "file": "photos/Dobby/DobbyHeisenberg.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Pawpaw",
+    "file": "photos/Dobby/DobbyPawpaw.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
     }
 ]
 
