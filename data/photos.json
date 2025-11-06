@@ -618,6 +618,36 @@
     "file": "photos/Dobby/DobbyPawpaw.png",
     "author": "@Catchqgg",
     "hasBackground": false
+    },
+        {
+    "title": "Dobby With Sigar",
+    "file": "photos/Dobby/DobbyWithSigar.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Matrix",
+    "file": "photos/Dobby/DobbyMatrix.png",
+    "author": "@Catchqgg",
+    "hasBackground": true
+    },
+        {
+    "title": "Dobby Matrix 2",
+    "file": "photos/Dobby/DobbyMatrix2.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Sleep",
+    "file": "photos/Dobby/DobbySleep.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Looking",
+    "file": "photos/Dobby/DobbyLooking.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
     }
 ]
 
