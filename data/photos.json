@@ -648,6 +648,42 @@
     "file": "photos/Dobby/DobbyLooking.png",
     "author": "@Catchqgg",
     "hasBackground": false
+    },
+        {
+    "title": "Dobby Pirate",
+    "file": "photos/Dobby/DobbyPirat.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Chill 3",
+    "file": "photos/Dobby/DobbyChill3.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Meets",
+    "file": "photos/Dobby/DobbyMeets.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Poker",
+    "file": "photos/Dobby/DobbyPoker.jpg",
+    "author": "@Catchqgg",
+    "hasBackground": true
+    },
+        {
+    "title": "Dobby Meets",
+    "file": "photos/Dobby/DobbyPubg.jpg",
+    "author": "@Catchqgg",
+    "hasBackground": true
+    },
+        {
+    "title": "Dobby Meets",
+    "file": "photos/Dobby/DobbyCS2.jpg",
+    "author": "@Catchqgg",
+    "hasBackground": true
     }
 ]
 
