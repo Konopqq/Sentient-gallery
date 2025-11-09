@@ -668,22 +668,46 @@
     "hasBackground": false
     },
         {
-    "title": "Dobby Poker",
+    "title": "Dobby Poker Event",
     "file": "photos/Dobby/DobbyPoker.jpg",
     "author": "@Catchqgg",
     "hasBackground": true
     },
         {
-    "title": "Dobby Meets",
+    "title": "Dobby Pubg Event",
     "file": "photos/Dobby/DobbyPubg.jpg",
     "author": "@Catchqgg",
     "hasBackground": true
     },
         {
-    "title": "Dobby Meets",
+    "title": "Dobby CS2 Event",
     "file": "photos/Dobby/DobbyCS2.jpg",
     "author": "@Catchqgg",
     "hasBackground": true
+    },
+        {
+    "title": "Dobby Cs2",
+    "file": "photos/Dobby/DobbyCS21.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby 3D",
+    "file": "photos/Dobby/Dobby3D.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Thumbs Up 3D",
+    "file": "photos/Dobby/DobbyThumbsUp3D.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Hello 3D",
+    "file": "photos/Dobby/DobbyHello3D.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
     }
 ]
 
