@@ -717,7 +717,7 @@
     },
         {
     "title": "Dobby With Phone 3D",
-    "file": "photos/Dobby/DobbywithPhone3.png",
+    "file": "photos/Dobby/DobbyWithPhone3.png",
     "author": "@Catchqgg",
     "hasBackground": false
     },
@@ -730,6 +730,36 @@
         {
     "title": "Dobby Pocoya2",
     "file": "photos/Dobby/DobbyPocoya2.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Funny 3D",
+    "file": "photos/Dobby/DobbyFunny4.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Cool 3D",
+    "file": "photos/Dobby/DobbyCool2.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Good Or No",
+    "file": "photos/Dobby/DobbyGoodOrNo.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Pocoya3",
+    "file": "photos/Dobby/DobbyPocoya3.png",
+    "author": "@Catchqgg",
+    "hasBackground": false
+    },
+        {
+    "title": "Dobby Camera 3D",
+    "file": "photos/Dobby/DobbyCamera3.png",
     "author": "@Catchqgg",
     "hasBackground": false
     }
